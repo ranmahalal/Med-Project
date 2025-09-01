@@ -202,6 +202,10 @@ $RECYCLE.BIN/
 # NumPy arrays and data files
 *.npy
 *.npz
+# unnecessary files
+npy_test.py
+npy_print.py
+requirements.txt
 
 # Vector embeddings and large data files
 data/vectors/

@@ -98,6 +98,7 @@ print(f"Processed {to_embed} texts into embeddings of shape {all_embeddings.shap
 #combine all batches into a single numpy array
 print("first 3 embeddings:")
 print(all_embeddings[:3])  # Print first 3 articles to see the embeddings
+
 #convert the pmids to a numpy array - only include the ones that were actually embedded
 pmid_array = np.array(all_pmids[:to_embed])
 
@@ -119,7 +120,7 @@ if os.path.exists(emb_file):
 np.save(emb_file, all_embeddings)
 print(f"Saved embeddings matrix (shape={all_embeddings.shape}) to {emb_file}")
 
-# ── Save pmid_index.npy ────────────────────────────────────────────────────
+# Save pmid_index.npy
 pmid_file = file_dir / 'pmid_index.npy'
 if pmid_file.exists():
     pmid_file.unlink()

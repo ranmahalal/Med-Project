@@ -15,7 +15,7 @@ import gzip
 import shutil
 from typing import List
 
-#Configuratin
+#Configuration
 BASE_URL = "https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/"
 DESTINATION_FOLDER = r"C:\med\xml_articles"
 
@@ -54,7 +54,7 @@ def download_and_decompress(file_name: str, destination_folder: str) -> None:
 
 
 def main():
-    file_list = generate_pubmed_filenames(1, 2)  # Example: download first 2 files
+    file_list = generate_pubmed_filenames(1, 2)  # Download first 2 files
     for file_name in file_list:
         download_and_decompress(file_name, DESTINATION_FOLDER)
 
